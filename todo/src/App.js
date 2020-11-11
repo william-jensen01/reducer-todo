@@ -4,8 +4,6 @@ import TodoList from './components/TodoList';
 
 import { formReducer, initialState, ADD_TASK, TOGGLE_TASK, CLEAR_TASK } from './reducer/todoReducer';
 
-import './App.css';
-
 function App() {
   const [state,dispatch] = useReducer(formReducer, initialState);
 
