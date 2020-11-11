@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const TodoForm = (props) => {
     const [formState, setFormState] = useState({
-        todo: ''
+        todo: '',
     });
 
     const handleChanges = (e) => {
@@ -11,16 +11,16 @@ const TodoForm = (props) => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e) => { 
         setFormState({
-            todo: ''
+            todo: '',
         });
-        props.addTask(formState.todo)
+        props.addTask(e, formState.todo)
     };
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="todo">Todo</label>
+            <label htmlFor="todo" />
                 <input
                     type="text"
                     name="todoTask"
