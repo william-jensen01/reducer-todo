@@ -25,13 +25,13 @@ function App() {
     e.preventDefault();
     dispatch({type: CLEAR_TASK});
   };
-
+  
   return (
     <div className="App">
       <h1>Todo List</h1>
       <TodoForm addTask={addTask}/>
       <TodoList
-        tasks = {state}
+        tasks = {state.tasks}
         toggleTask = {toggleTask}
         clearTask = {clearTask}
         />
